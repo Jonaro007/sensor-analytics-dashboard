@@ -1,33 +1,86 @@
 # Sensor Analytics Dashboard
+# Overview
 
-A modern telemetry analysis platform built with Python and Streamlit for visualizing and analyzing vehicle sensor data collected by an ESP32. The dashboard combines GPS, IMU (MPU6050), and environmental sensor (BME280) data to provide comprehensive trip analysis, driving behavior insights, and interactive data visualization.
+The Sensor Analytics Dashboard is a Python-based telemetry analysis application built with Streamlit. It visualizes and analyzes vehicle sensor data collected by an ESP32 using GPS, IMU (MPU6050), and environmental sensors (BME280).
 
-This project was developed as part of a high school software engineering project and combines embedded systems, data analysis, databases, and modern web technologies into a practical telemetry application.
-
-> **Note:** This is a fully functional prototype. Some components were intentionally simplified to focus on data processing, sensor integration, and visualization concepts.
+The application allows users to inspect complete trips or short time intervals through an interactive web interface, providing statistics, route visualization, event detection, and detailed sensor analysis.
 
 ---
 
-# Features
-
-- Interactive GPS route visualization
+## Features
+# GPS Analysis
+- Interactive route visualization using Folium
 - Total distance calculation
-- Average, minimum, and maximum speed analysis
-- GPS accuracy and satellite statistics
+- Average, minimum, and maximum speed
+- GPS accuracy statistics
+- Average satellite count
 - Elevation analysis
-- Trip duration and timestamp tracking
-- Automatic detection of hard braking
-- Automatic detection of strong acceleration
-- Left and right turn detection
-- Strong impact detection
-- Road vibration analysis
+- Trip duration
+- Start and end timestamps
+- Driving Behavior Analysis
+
+# Using MPU6050 sensor data, the dashboard automatically detects:
+
+- Hard braking
+- Strong acceleration
+- Left turns
+- Right turns
+- Strong impacts
+- Road vibration
 - Ride comfort classification
-- Interactive speed and vibration charts
-- Environmental monitoring (temperature, pressure, humidity)
-- Short-term and full-trip analysis
-- Event timeline with timestamps
-- Trip comparison and selection
-- Modern responsive dashboard interface
+
+- Recent driving events are displayed together with timestamps.
+
+## Interactive Charts
+
+The dashboard includes several interactive Plotly charts:
+
+- Speed over time
+-Vibration / Impact over time
+
+Users can zoom, pan, and inspect every measurement.
+
+## Interactive GPS Map
+
+The dashboard displays:
+
+- Full driven route
+- Start position
+- End position
+- OpenStreetMap integration
+  
+## Environmental Monitoring
+
+Using the BME280 sensor, the dashboard records:
+
+- Temperature
+- Air pressure
+- Humidity
+
+Average values are calculated for every trip.
+
+## Trip Management
+
+Users can:
+
+- Select any recorded trip
+- View complete trips
+- Analyze short-term time windows
+- Display trip duration
+- Compare different trips
+
+# Dashboard Statistics
+
+The overview page provides:
+
+- Distance traveled
+- Driving time
+- Standing time
+- Time spent moving
+- Height above sea level
+- Ride comfort
+- Sensor status
+- Recent driving events
 
 ---
 
@@ -38,7 +91,7 @@ This project was developed as part of a high school software engineering project
 - Python
 - SQLite
 - Pandas
-- Custom Data Analysis Module
+- Custom Data Analysis Script
 
 ## Dashboard
 
@@ -57,40 +110,28 @@ This project was developed as part of a high school software engineering project
 
 ---
 
-# Known Limitations
-
-As this project was developed as a high school prototype, several improvements would be required before deploying it in a production environment:
-
-- Support for multiple vehicles and users
-- Live telemetry streaming
-- Cloud-based database integration
-- Advanced statistical analysis and reporting
-- Machine learning for driving behavior classification
-- Export functionality for reports and datasets
-- Improved scalability and performance optimization
-
----
-
-# System Architecture
-
-The system consists of four main components.
-
-## ESP32 Sensor Platform
-
-Collects GPS, motion, and environmental sensor data during a trip.
-
-## Database
-
-Stores all recorded telemetry data using SQLite for later analysis.
-
-## Analysis Engine
-
-Processes the collected sensor data, calculates statistics, detects driving events, and prepares the data for visualization.
-
-## Dashboard
-
-Provides an interactive interface for exploring trips, viewing statistics, analyzing driving behavior, and visualizing sensor data.
-
+Data Flow
+'''ESP32
+│
+├── GPS
+├── MPU6050
+├── BME280
+│
+▼
+SQLite Database
+│
+▼
+Python Analysis Module
+│
+▼
+Streamlit Dashboard
+│
+├── Statistics
+├── Interactive Charts
+├── GPS Map
+├── Event Detection
+└── Environmental Analysis
+'''
 ---
 
 # Installation
