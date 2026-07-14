@@ -111,7 +111,8 @@ The overview page provides:
 ---
 
 Data Flow
-'''ESP32
+```
+ESP32
 │
 ├── GPS
 ├── MPU6050
@@ -131,7 +132,8 @@ Streamlit Dashboard
 ├── GPS Map
 ├── Event Detection
 └── Environmental Analysis
-'''
+```
+
 ---
 
 # Installation
