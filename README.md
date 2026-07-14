@@ -7,8 +7,8 @@ The application allows users to inspect complete trips or short time intervals t
 
 ---
 
-## Features
-# GPS Analysis
+# Features
+## GPS Analysis
 - Interactive route visualization using Folium
 - Total distance calculation
 - Average, minimum, and maximum speed
@@ -19,7 +19,7 @@ The application allows users to inspect complete trips or short time intervals t
 - Start and end timestamps
 - Driving Behavior Analysis
 
-# Using MPU6050 sensor data, the dashboard automatically detects:
+## Using MPU6050 sensor data, the dashboard automatically detects:
 
 - Hard braking
 - Strong acceleration
@@ -36,7 +36,7 @@ The application allows users to inspect complete trips or short time intervals t
 The dashboard includes several interactive Plotly charts:
 
 - Speed over time
--Vibration / Impact over time
+- Vibration / Impact over time
 
 Users can zoom, pan, and inspect every measurement.
 
@@ -110,7 +110,7 @@ The overview page provides:
 
 ---
 
-Data Flow
+# Data Flow
 ```
 ESP32
 │
@@ -161,17 +161,6 @@ The application automatically starts the Flask backend and launches the Streamli
 
 ---
 
-# How It Works
-
-1. The ESP32 records GPS, IMU, and environmental sensor data during a trip.
-2. All measurements are stored in a SQLite database.
-3. The analysis engine processes the collected telemetry data.
-4. Driving events such as hard braking, acceleration, turns, and impacts are detected automatically.
-5. Statistics and visualizations are generated from the processed data.
-6. The Streamlit dashboard displays interactive maps, charts, and detailed trip information.
-
----
-
 # Hardware Requirements
 
 To recreate the project, the following hardware is required:
@@ -181,22 +170,4 @@ To recreate the project, the following hardware is required:
 - MPU6050 Accelerometer and Gyroscope
 - BME280 Environmental Sensor
 
----
 
-# Implemented Features
-
-- GPS route reconstruction
-- Vehicle telemetry analysis
-- Driving behavior detection
-- Interactive Plotly visualizations
-- OpenStreetMap route visualization
-- Environmental sensor monitoring
-- Trip statistics and comparison
-- SQLite-based telemetry storage
-- Responsive dark-themed dashboard
-
----
-
-# Documentation
-
-Additional technical documentation and source code are available throughout the repository.
