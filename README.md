@@ -8,6 +8,7 @@ The application allows users to inspect complete trips or short time intervals t
 ---
 
 # Features
+
 ## GPS Analysis
 - Interactive route visualization using Folium
 - Total distance calculation
@@ -18,6 +19,7 @@ The application allows users to inspect complete trips or short time intervals t
 - Trip duration
 - Start and end timestamps
 - Driving Behavior Analysis
+
 
 ## Using MPU6050 sensor data, the dashboard automatically detects:
 
@@ -31,6 +33,7 @@ The application allows users to inspect complete trips or short time intervals t
 
 - Recent driving events are displayed together with timestamps.
 
+
 ## Interactive Charts
 
 The dashboard includes several interactive Plotly charts:
@@ -40,6 +43,7 @@ The dashboard includes several interactive Plotly charts:
 
 Users can zoom, pan, and inspect every measurement.
 
+
 ## Interactive GPS Map
 
 The dashboard displays:
@@ -48,6 +52,7 @@ The dashboard displays:
 - Start position
 - End position
 - OpenStreetMap integration
+
   
 ## Environmental Monitoring
 
@@ -59,6 +64,7 @@ Using the BME280 sensor, the dashboard records:
 
 Average values are calculated for every trip.
 
+
 ## Trip Management
 
 Users can:
@@ -68,6 +74,7 @@ Users can:
 - Analyze short-term time windows
 - Display trip duration
 - Compare different trips
+
 
 # Dashboard Statistics
 
@@ -82,16 +89,20 @@ The overview page provides:
 - Sensor status
 - Recent driving events
 
+
 ---
+
 
 # Technologies
 
 ## Backend
 
+- Flask
 - Python
 - SQLite
 - Pandas
-- Custom Data Analysis Script
+- Custom Data Analysis Scripts
+
 
 ## Dashboard
 
@@ -100,6 +111,7 @@ The overview page provides:
 - Folium
 - HTML
 - CSS
+
 
 ## Embedded System
 
@@ -141,7 +153,7 @@ Streamlit Dashboard
 ### Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Jonaro007/sensor-analytics-dashboard.git
 cd sensor-analytics-dashboard
 ```
 
