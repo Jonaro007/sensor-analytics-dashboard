@@ -1,0 +1,7 @@
+Flask
+pandas
+streamlit
+plotly
+folium
+streamlit-folium
+requests
