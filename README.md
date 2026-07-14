@@ -5,6 +5,7 @@ The Sensor Analytics Dashboard is a Python-based telemetry analysis application 
 
 The application allows users to inspect complete trips or short time intervals through an interactive web interface, providing statistics, route visualization, event detection, and detailed sensor analysis.
 
+![Dashboard](docs/images/dashboard_overview.png)
 ---
 
 # Features
